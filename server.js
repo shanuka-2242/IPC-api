@@ -32,16 +32,16 @@ app.post("/buses", async(req, res) => {
     }
   })
 
-//   //Get Bus Information
-// app.get("/buses", async (req, res) => {
-//     try 
-//     {
-//         const busInfos = await BusInfoModel.find({});
-//         console.log(busInfos);
-//         res.send(busInfos);
-//     } 
-//     catch (err) 
-//     {
-//         res.status(500).json({ error: err.message });
-//     }
-//   });
+  //Get Bus Information
+app.get("/buses", async (req, res) => {
+    try 
+    {
+        const busInfos = await BusInfoModel.find({});
+        console.log(busInfos);
+        res.send(busInfos);
+    } 
+    catch (err) 
+    {
+        res.status(500).json({ error: err.message });
+    }
+  });
